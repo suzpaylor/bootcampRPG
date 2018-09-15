@@ -1,0 +1,176 @@
+/*---------------------*/
+/* Body and background */
+/*---------------------*/
+body {
+    /*
+  background-color: #C2C3C7;*/
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
+
+
+
+.backgrounds {  
+   width: 1280px;
+   height: 750px;
+   display: block;
+   position: relative;
+ }
+     
+ 
+ .backgrounds::after {
+     content: "";
+     background: url("../images/HKP2.png");
+     opacity: 0.5;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     right: 0;
+     position: absolute;
+     z-index: -1;   
+   }
+
+header {
+  font-size: 50px;
+  text-align: center;
+  padding: 20px;
+}
+.characterWrapper {
+  width: 75%;
+  margin-right: auto;
+  margin-left: auto;
+}
+#gameMessage {
+  text-align: center;
+  font-size: 10px;
+}
+#choose-enemy-button {
+  visibility: hidden;
+}
+#restart-button {
+  visibility: hidden;
+}
+#turn-counter {
+  font-size: 150%;
+}
+
+/*---------------------*/
+/* Character rendering */
+/*---------------------*/
+
+.character:hover {
+  color: grey;
+  letter-spacing: 4px;
+}
+.character {
+  width: 200px;
+  margin: 0px 20px 0px 20px;
+  cursor: pointer;
+  display: inline-block;
+  transition: 0.5s;
+}
+.character img {
+  border: 0 none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 200px;
+  transition: 0.6s;
+}
+.character img:hover {
+  padding: 10px;
+}
+.character-name {
+  text-align: center;
+  text-transform: capitalize;
+  line-height: 30px;
+  font-family: 'Itim', cursive;
+  font-size: 20px;
+}
+.character-health {
+  text-align: center;
+}
+
+/*---------------------*/
+/*      Fighting       */
+/*---------------------*/
+
+.attack {
+  text-align: center;
+}
+.action {
+  margin: 15px 0px;
+}
+#attack-button{
+	visibility: hidden;
+}
+.btn {
+	background: #f8bcb7;
+	color: black;	
+}
+.enemy {
+	width: 220px;
+  margin: 5px;
+  /*
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  */
+  cursor: pointer;
+  display: inline-block;
+  background-color:#f8bcb7;
+  float: left;
+}
+#attacker {
+	padding: 5px;
+}
+.target-enemy {
+background-color: #f8bcb7;
+color: white;
+}
+
+#gameMessage {
+  font-size: 16px;
+}
+
+/*---------------------*/
+/* Available Oponents  */
+/*---------------------*/
+#available-to-attack-section {
+  float: right;
+}
+#available-to-attack-section img {
+	height: 100px;
+}
+
+/*---------------------*/
+/*      Defender       */
+/*---------------------*/
+
+/*#defender {
+  width: 190px;
+  height: 160px;
+}*/
+#defender-name {
+  text-align: center;
+}
+#defender-image {
+  padding: 0px 16px;
+  margin: 3px 0px;
+}
+#defender-health {
+  text-align: center;
+}
+
+/*---------------------*/
+/*   Media Queries     */
+/*---------------------*/
+@media only screen and (max-width: 768px) {
+  .character {
+    display: block;
+  height: 150px;    
+  }
+  #gameMessage {
+  font-size: 12px;
+  }
+}
